@@ -5,6 +5,7 @@ import android.os.Bundle
 import dagger.android.AndroidInjection
 import ejarosiewicz.com.dependencyintension.printer.AnotherPrinter
 import ejarosiewicz.com.dependencyintension.printer.MyPrinter
+import ejarosiewicz.com.processor.ComponentSource
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var anotherPrinter: AnotherPrinter
 
+
+    @ComponentSource
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
